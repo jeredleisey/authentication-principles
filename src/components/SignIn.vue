@@ -137,6 +137,37 @@ const createAcct = async () => {
           </button>
         </div>
       </form>
+
+      <div class="mt-6 grid grid-cols-3 items-center text-gray-600">
+        <hr class="border-gray-400" />
+        <p class="text-center text-sm font-concert-one">Or continue with</p>
+        <hr class="border-gray-400" />
+      </div>
+
+      <div class="grid grid-cols-3 items-center gap-x-4">
+        <button
+          class="bg-white border py-2 w-full rounded-md flex justify-center items-center text-sm hover:bg-yellow-50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
+        >
+          <img src="../assets/google.svg" />
+        </button>
+        <button
+          class="bg-white border py-2 w-full rounded-md flex justify-center items-center text-sm hover:bg-yellow-50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
+        >
+          <img src="../assets/apple.svg" />
+        </button>
+        <button
+          class="bg-white border py-2 w-full rounded-md flex justify-center items-center text-sm hover:bg-yellow-50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
+        >
+          <img src="../assets/github.svg" />
+        </button>
+      </div>
+
+      <div class="text-gray-600">
+        Don't have an account yet?
+        <a class="text-amber-500 hover:text-amber-700" href="/sign-up"
+          >Sign up!</a
+        >
+      </div>
     </div>
   </div>
 </template>
