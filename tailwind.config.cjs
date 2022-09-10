@@ -8,5 +8,11 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [
+    require('@tailwindcss/forms'),
+    function ({ addVariant }) {
+      addVariant('child', '& > *');
+      addVariant('child-hover', '& > *:hover');
+    },
+  ],
 };
