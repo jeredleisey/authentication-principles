@@ -1,14 +1,19 @@
 <script setup lang="ts">
 import { userSessionStore } from '../stores/userSession';
-import AuthCard from '@/components/AuthCard.vue';
+import SignIn from '@/components/SignIn.vue';
 
 // initialize userSession store
 const userSession = userSessionStore();
 </script>
 
 <template>
-  <AuthCard />
-  <div>
-    {{ userSession.session }}
+  <div v-if="!userSession.session">
+    <SignIn />
+  </div>
+  <div
+    class="flex justify-center font-concert-one text-gray-500 text-3xl"
+    v-if="userSession.session"
+  >
+    Congrats on being a member!
   </div>
 </template>

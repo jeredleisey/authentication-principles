@@ -11,15 +11,15 @@ const passwordConfirm = ref('');
 const createAcct = async (email: string, password: string) => {
   console.log({ email, password });
 
-  //   try {
-  //     const { error } = await supabase.auth.signUp({
-  //       email: email,
-  //       password: password,
-  //     });
-  //     if (error) throw error;
-  //   } catch (error) {
-  //     alert((error as Error).message);
-  //   }
+  try {
+    const { error } = await supabase.auth.signUp({
+      email: email,
+      password: password,
+    });
+    if (error) throw error;
+  } catch (error) {
+    alert((error as Error).message);
+  }
 };
 </script>
 
@@ -125,6 +125,11 @@ const createAcct = async (email: string, password: string) => {
         >
           <img src="../assets/github.svg" />
         </button>
+      </div>
+
+      <div class="text-gray-600">
+        Already have an account?
+        <a class="text-amber-500 hover:text-amber-700" href="/">Sign in!</a>
       </div>
     </div>
   </div>

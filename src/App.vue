@@ -16,6 +16,8 @@ supabase.auth.onAuthStateChange((event, session) => {
 </script>
 
 <template>
-  <NavBar />
+  <div class="flex justify-center">
+    <NavBar />
+  </div>
   <RouterView />
 </template>
