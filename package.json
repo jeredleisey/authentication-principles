@@ -13,6 +13,8 @@
     "@heroicons/vue": "^2.0.10",
     "@supabase/supabase-js": "^1.35.6",
     "@tailwindcss/forms": "^0.5.3",
+    "@vuelidate/core": "^2.0.0-alpha.44",
+    "@vuelidate/validators": "^2.0.0-alpha.31",
     "path": "^0.12.7",
     "pinia": "^2.0.22",
     "vue": "^3.2.37",
