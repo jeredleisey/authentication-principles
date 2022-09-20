@@ -9,8 +9,7 @@ const userSession = userSessionStore();
 
 // listen for auth events (e.g. sign in, sign out, refresh)
 // set session based on the auth event
-supabase.auth.onAuthStateChange((event, session) => {
-  console.log(event);
+supabase.auth.onAuthStateChange((_, session) => {
   userSession.session = session;
 });
 </script>
