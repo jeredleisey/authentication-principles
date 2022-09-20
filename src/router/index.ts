@@ -4,7 +4,6 @@ import { userSessionStore } from '@/stores/userSession';
 import Home from '@/views/Home.vue';
 import SignUp from '@/components/SignUp.vue';
 import Admin from '@/views/Admin.vue';
-import VuelidateTest from '@/components/VuelidateTest.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,11 +17,6 @@ const router = createRouter({
       path: '/sign-up',
       name: 'sign up',
       component: SignUp,
-    },
-    {
-      path: '/vuelidate',
-      name: 'vuelidate',
-      component: VuelidateTest,
     },
     {
       path: '/admin',
