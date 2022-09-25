@@ -55,4 +55,14 @@ const createAcct = async (email: string, password: string) => {
   }
 };
 
-export { supabase, login, loginWithProvider, logOut, createAcct };
+// send forgot password email
+const forgotPwd = async (email: string) => {
+  try {
+    const { error } = await supabase.auth.api.resetPasswordForEmail(email);
+    if (error) throw error;
+  } catch (error) {
+    alert((error as Error).message);
+  }
+};
+
+export { supabase, login, loginWithProvider, logOut, createAcct, forgotPwd };
