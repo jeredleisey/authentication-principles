@@ -11,7 +11,7 @@ const userSession = userSessionStore();
       class="col-start-2 justify-self-center space-x-5 py-2 self-center font-concert-one text-gray-700 child-hover:text-amber-600 text-xl"
     >
       <router-link to="/">Home</router-link>
-      <router-link to="/admin">Admin</router-link>
+      <router-link to="/admin" v-if="userSession.session">Admin</router-link>
     </div>
     <div class="col-start-3 justify-self-end pr-4" v-if="userSession.session">
       <img
