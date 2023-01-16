@@ -30,7 +30,7 @@ const v$ = useVuelidate(rules, state);
     <div class="w-full max-w-md space-y-8">
       <div>
         <img
-          src="../assets/wheat-logo.svg"
+          src="/wheat-logo.svg"
           alt="3 Wheat Auth"
           class="mx-auto h-24 w-auto"
         />
@@ -161,7 +161,9 @@ const v$ = useVuelidate(rules, state);
 
       <div class="text-gray-600">
         Already have an account?
-        <a class="text-amber-500 hover:text-amber-700" href="/">Sign in!</a>
+        <router-link :to="'/'" class="text-amber-500 hover:text-amber-700">
+          Sign in!
+        </router-link>
       </div>
     </div>
   </div>

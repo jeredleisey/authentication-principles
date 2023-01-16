@@ -31,7 +31,7 @@ const submit = () => {
     <div class="w-full max-w-md space-y-8">
       <div>
         <img
-          src="../assets/wheat-logo.svg"
+          src="/wheat-logo.svg"
           alt="3 Wheat Auth"
           class="mx-auto h-24 w-auto"
         />
