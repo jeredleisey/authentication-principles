@@ -77,8 +77,7 @@ const forgotPwd = async (email: string) => {
   try {
     const { error } = await supabase.auth.api.resetPasswordForEmail(email, {
       redirectTo:
-        'http://localhost:5173/authentication-principles/reset-password',
-      // 'https://www.jeredleisey.com/authentication-principles/reset-password',
+        'https://www.jeredleisey.com/authentication-principles/reset-password',
     });
     if (error) throw error;
   } catch (error) {
