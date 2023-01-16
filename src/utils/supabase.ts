@@ -6,6 +6,8 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
+// TODO: Set up friendly app name for Google https://github.com/supabase/supabase/discussions/2925
+
 // login function
 const login = async (email: string, password: string) => {
   try {
@@ -73,11 +75,35 @@ const createAcct = async (email: string, password: string) => {
 // send forgot password email
 const forgotPwd = async (email: string) => {
   try {
-    const { error } = await supabase.auth.api.resetPasswordForEmail(email);
+    const { error } = await supabase.auth.api.resetPasswordForEmail(email, {
+      redirectTo:
+        'http://localhost:5173/authentication-principles/reset-password',
+      // 'https://www.jeredleisey.com/authentication-principles/reset-password',
+    });
     if (error) throw error;
   } catch (error) {
     alert((error as Error).message);
   }
 };
 
-export { supabase, login, loginWithProvider, logOut, createAcct, forgotPwd };
+// update user password
+const updatePwd = async (password: string) => {
+  try {
+    const { error } = await supabase.auth.update({
+      password: password,
+    });
+    if (error) throw error;
+  } catch (error) {
+    alert((error as Error).message);
+  }
+};
+
+export {
+  supabase,
+  login,
+  loginWithProvider,
+  logOut,
+  createAcct,
+  forgotPwd,
+  updatePwd,
+};

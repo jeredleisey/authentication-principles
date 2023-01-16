@@ -5,6 +5,7 @@ import Home from '@/views/Home.vue';
 import Admin from '@/views/Admin.vue';
 import SignUp from '@/components/SignUp.vue';
 import ForgotPasswordForm from '@/components/ForgotPasswordForm.vue';
+import ResetPassword from '@/components/ResetPassword.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,11 @@ const router = createRouter({
       path: '/forgot-password',
       name: 'forgot',
       component: ForgotPasswordForm,
+    },
+    {
+      path: '/reset-password',
+      name: 'reset',
+      component: ResetPassword,
     },
     {
       path: '/admin',
