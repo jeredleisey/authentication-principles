@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "echo 'www.jeredleisey.com/authentication-principles' > ./dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.0",
@@ -25,6 +26,7 @@
     "@types/node": "^18.7.16",
     "@vitejs/plugin-vue": "^3.1.0",
     "autoprefixer": "^10.4.8",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8",
     "typescript": "^4.6.4",

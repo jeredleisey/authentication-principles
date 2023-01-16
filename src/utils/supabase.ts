@@ -9,10 +9,15 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 // login function
 const login = async (email: string, password: string) => {
   try {
-    const { error } = await supabase.auth.signIn({
-      email: email,
-      password: password,
-    });
+    const { error } = await supabase.auth.signIn(
+      {
+        email: email,
+        password: password,
+      },
+      {
+        redirectTo: 'https://www.jeredleisey.com/authentication-principles',
+      }
+    );
     if (error) throw error;
   } catch (error) {
     alert((error as Error).message);
@@ -22,9 +27,14 @@ const login = async (email: string, password: string) => {
 // login with provider
 const loginWithProvider = async (provider: Provider) => {
   try {
-    const { error } = await supabase.auth.signIn({
-      provider: provider,
-    });
+    const { error } = await supabase.auth.signIn(
+      {
+        provider: provider,
+      },
+      {
+        redirectTo: 'https://www.jeredleisey.com/authentication-principles',
+      }
+    );
     if (error) throw error;
   } catch (error) {
     alert((error as Error).message);
@@ -45,10 +55,15 @@ const logOut = async () => {
 // create account
 const createAcct = async (email: string, password: string) => {
   try {
-    const { error } = await supabase.auth.signUp({
-      email: email,
-      password: password,
-    });
+    const { error } = await supabase.auth.signUp(
+      {
+        email: email,
+        password: password,
+      },
+      {
+        redirectTo: 'https://www.jeredleisey.com/authentication-principles',
+      }
+    );
     if (error) throw error;
   } catch (error) {
     alert((error as Error).message);
