@@ -39,6 +39,7 @@ const v$ = useVuelidate(rules, state);
           We barley knew you
         </h2>
       </div>
+
       <form class="mt-8 space-y-6" action="#" method="POST">
         <input type="hidden" name="remember" value="true" />
         <div class="-space-y-px rounded-md shadow-sm">
@@ -111,12 +112,12 @@ const v$ = useVuelidate(rules, state);
           </div>
 
           <div class="text-sm">
-            <a
-              href="#"
+            <router-link
+              :to="'forgot-password'"
               class="font-concert-one text-amber-600 hover:text-amber-500"
             >
               Forgot your password?
-            </a>
+            </router-link>
           </div>
         </div>
 
