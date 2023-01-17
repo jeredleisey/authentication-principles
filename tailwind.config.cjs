@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'concert-one': ['Concert\\ One', 'cursive'],
+        'concert-one': ['Concert\\ One'],
       },
     },
   },
