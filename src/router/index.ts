@@ -6,6 +6,7 @@ import Admin from '@/views/Admin.vue';
 import SignUp from '@/components/SignUp.vue';
 import ForgotPasswordForm from '@/components/ForgotPasswordForm.vue';
 import ResetPassword from '@/components/ResetPassword.vue';
+import NotFound from '@/components/NotFound.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,6 +38,11 @@ const router = createRouter({
       meta: {
         needsAuth: true,
       },
+    },
+    {
+      path: '/:pathMatch(.*)',
+      name: 'not-found',
+      component: NotFound,
     },
   ],
 });
