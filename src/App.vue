@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
-import NavBar from './components/NavBar.vue';
+import NavBar from './components/NavigationBar.vue';
 import { userSessionStore } from './stores/userSession';
 import { supabase } from './utils/supabase';
 
