@@ -12,6 +12,6 @@ function buttonClick() {
     class="bg-white border py-2 w-full rounded-md flex justify-center items-center text-sm hover:bg-yellow-50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
     @click="buttonClick"
   >
-    <img :src="`/authentication-principles/${props.provider}.svg`" />
+    <img :src="`/${props.provider}.svg`" />
   </button>
 </template>
