@@ -34,7 +34,7 @@ const loginWithProvider = async (provider: Provider) => {
         provider: provider,
       },
       {
-        redirectTo: 'https://www.jeredleisey.com/authentication-principles',
+        redirectTo: 'https://www.differentialdesign.io/',
       }
     );
     if (error) throw error;
@@ -63,7 +63,7 @@ const createAcct = async (email: string, password: string) => {
         password: password,
       },
       {
-        redirectTo: 'https://www.jeredleisey.com/authentication-principles',
+        redirectTo: 'https://www.differentialdesign.io',
       }
     );
     if (error) throw error;
@@ -76,8 +76,7 @@ const createAcct = async (email: string, password: string) => {
 const forgotPwd = async (email: string) => {
   try {
     const { error } = await supabase.auth.api.resetPasswordForEmail(email, {
-      redirectTo:
-        'https://www.jeredleisey.com/authentication-principles/reset-password',
+      redirectTo: 'https://www.differentialdesign.io/reset-password',
     });
     if (error) throw error;
   } catch (error) {
