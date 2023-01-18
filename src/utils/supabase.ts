@@ -4,6 +4,8 @@ import router from '../router';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
+const rootUrl = 'https://www.jeredleisey.com/auth';
+
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 // TODO: Set up friendly app name for Google https://github.com/supabase/supabase/discussions/2925
@@ -17,7 +19,7 @@ const login = async (email: string, password: string) => {
         password: password,
       },
       {
-        redirectTo: 'https://www.jeredleisey.com/authentication-principles',
+        redirectTo: rootUrl,
       }
     );
     if (error) throw error;
@@ -34,7 +36,7 @@ const loginWithProvider = async (provider: Provider) => {
         provider: provider,
       },
       {
-        redirectTo: 'https://www.differentialdesign.io/',
+        redirectTo: rootUrl,
       }
     );
     if (error) throw error;
@@ -63,7 +65,7 @@ const createAcct = async (email: string, password: string) => {
         password: password,
       },
       {
-        redirectTo: 'https://www.differentialdesign.io',
+        redirectTo: rootUrl,
       }
     );
     if (error) throw error;
@@ -76,7 +78,7 @@ const createAcct = async (email: string, password: string) => {
 const forgotPwd = async (email: string) => {
   try {
     const { error } = await supabase.auth.api.resetPasswordForEmail(email, {
-      redirectTo: 'https://www.differentialdesign.io/reset-password',
+      redirectTo: rootUrl + '/reset-password',
     });
     if (error) throw error;
   } catch (error) {
