@@ -40,7 +40,7 @@ const v$ = useVuelidate(rules, state);
         <h2
           class="mt-1 text-center text-lg font-concert-one tracking-tight text-yellow-500"
         >
-          We barley knew you
+          We barley knew you!
         </h2>
       </div>
       <form action="#" method="POST" class="mt-8 space-y-6">
